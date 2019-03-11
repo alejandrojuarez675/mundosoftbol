@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+.body{
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: black;
+    color: white;
+}
