@@ -1,6 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
-.body{
+.body {
     padding-left: 5%;
     padding-right: 5%;
+    background-color: white;
+}
+
+/* mobile responsive design*/
+@media(max-width: 800px) {
+    .body {
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: white;
+    }
 }

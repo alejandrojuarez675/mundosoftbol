@@ -1,36 +1,49 @@
-.left-body{
+.left-body {
     width: 70%;
     float: left;
     position: relative;
 }
 
-.right-body{
+.right-body {
     width: 30%;
     float: right;
     position: relative;
     padding: 2%;
 }
 
-.not-noticia{
+.not-noticia {
     padding-bottom: 3%;
 }
 
-.pub-publicidad{
+.pub-publicidad {
     padding-bottom: 10%;
 }
 
-.art-articulo{
+.art-articulo {
     padding-bottom: 10%;
 }
 
-.not-titulo{
+.not-titulo {
     width: 100%;
     text-align: center;
     font-size: 28px;
     padding: 2%;
 }
 
-.art-titulo{
+.art-titulo {
     font-size: 18px;
     text-align: center;
+}
+
+/* MOBILE DESIGN for reponsive */
+@media(max-width: 800px) {
+    .left-body {
+        width: 100%;
+        position: relative;
+    }
+    
+    .right-body {
+        width: 100%;
+        position: relative;
+    }
 }
