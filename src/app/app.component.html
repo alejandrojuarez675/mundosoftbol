@@ -1,54 +1,98 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
 
 <div class="body">
+  <div class="row clearfix">
 
-  <!-- IZQUIERDA -->
-  <div class="left-body">
-    <ng-container *ngIf="info != undefined">
+    <!-- IZQUIERDA -->
+    <div class="left-body">
+      <ng-container *ngIf="info != undefined">
 
-      <!-- ARTICULOS -->
-      <ng-container *ngFor="let row of info.articuloDTOs">
-        <ng-container *ngIf="row.tipo == 1">
-          <div class="not-noticia row clearfix">
-            <div class="not-titulo">
-              {{row.titulo}}
+        <ng-container *ngFor="let row of info.publicidadDTOs">
+          <ng-container *ngIf="row.tipo == 2">
+            <ng-container *ngIf="row.orden == 1">
+              <div class="not-noticia row clearfix">
+                <div class="not-imagen">
+                  <img src="{{row.imagen.url}}" class="float-left" width="100%" style="padding: 2%;">
+                </div>
+              </div>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+
+        <!-- ARTICULOS -->
+        <ng-container *ngFor="let row of info.articuloDTOs">
+
+          <!-- COMUN -->
+          <ng-container *ngIf="row.tipo == 1">
+            <div class="not-noticia row clearfix">
+              <div class="not-titulo">
+                {{row.titulo.toUpperCase()}}
+              </div>
+              <div class="not-imagen">
+                <ng-container *ngIf="row.imagenes.length >= 1">
+                  <img src="{{row.imagenes[0].url}}" class="float-left" width="45%" style="padding: 2%;">
+                </ng-container>
+                <p class="text-justify">
+                  {{row.resumen}}
+                </p>
+              </div>
             </div>
-            <div class="not-imagen">
-              <img src="{{row.imagenes[0].url}}" class="float-left" width="46%" style="padding: 2%;">
-              <p class="text-justify">
+          </ng-container>
+
+          <!-- SOLO IMAGEN -->
+          <ng-container *ngIf="row.tipo == 3">
+            <div class="not-noticia row clearfix">
+              <div class="not-imagen">
+                <ng-container *ngIf="row.imagenes.length >= 1">
+                  <img src="{{row.imagenes[0].url}}" class="float-left" width="100%" style="padding: 2%;">
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+
+        </ng-container>
+
+        <ng-container *ngFor="let row of info.publicidadDTOs">
+          <ng-container *ngIf="row.tipo == 2">
+            <ng-container *ngIf="row.orden != 1">
+              <div class="not-noticia row clearfix">
+                <div class="not-imagen">
+                  <img src="{{row.imagen.url}}" class="float-left" width="100%" style="padding: 2%;">
+                </div>
+              </div>
+            </ng-container>
+          </ng-container>
+        </ng-container>
+
+      </ng-container>
+    </div>
+
+    <!-- SIDEBAR-->
+    <div class="right-body">
+      <ng-container *ngIf="info != undefined">
+
+        <!-- PUBLICIDAD -->
+        <ng-container *ngFor="let row of info.publicidadDTOs">
+          <ng-container *ngIf="row.tipo == 1">
+            <img src="{{row.imagen.url}}" width="100%" class="pub-publicidad">
+          </ng-container>
+        </ng-container>
+
+        <!-- MINI ARTICULO-->
+        <ng-container *ngFor="let row of info.articuloDTOs">
+          <ng-container *ngIf="row.tipo == 2">
+            <div class="art-articulo row clearfix">
+              <div class="art-titulo">
+                {{row.titulo}}
+              </div>
+              <div class="art-texto">
                 {{row.resumen}}
-              </p>
+              </div>
             </div>
-          </div>
+          </ng-container>
         </ng-container>
       </ng-container>
 
-    </ng-container>
-  </div>
-
-  <!-- SIDEBAR-->
-  <div class="right-body">
-    <ng-container *ngIf="info != undefined">
-
-      <!-- PUBLICIDAD -->
-      <ng-container *ngFor="let row of info.publicidadDTOs">
-        <img src="{{row.imagen.url}}" width="100%" class="pub-publicidad">
-      </ng-container>
-
-      <!-- MINI ARTICULO-->
-      <ng-container *ngFor="let row of info.articuloDTOs">
-        <ng-container *ngIf="row.tipo == 2">
-          <div class="art-articulo row clearfix">
-            <div class="art-titulo">
-              {{row.titulo}}
-            </div>
-            <div class="art-texto">
-              {{row.resumen}}
-            </div>
-          </div>
-        </ng-container>
-      </ng-container>
-    </ng-container>
-
+    </div>
   </div>
 </div>
