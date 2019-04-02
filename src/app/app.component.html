@@ -1,46 +1,54 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
 
-<!-- IZQUIERDA -->
-<div class="left-body">
+<div class="body">
 
-  <ng-container *ngIf="info != undefined">
-    <ng-container *ngFor="let row of info.articuloDTOs">
-      <div class="not-noticia">
-        <div class="not-titulo">
-          {{row.titulo}}
-        </div>
-        <div class="not-imagen">
-          <img src="{{row.imagenes[0].url}}" class="float-left" width="46%" style="padding: 2%;">
-          <p class="text-justify">
-            {{row.resumen}}
-          </p>
-        </div>
-      </div>
+  <!-- IZQUIERDA -->
+  <div class="left-body">
+    <ng-container *ngIf="info != undefined">
+
+      <!-- ARTICULOS -->
+      <ng-container *ngFor="let row of info.articuloDTOs">
+        <ng-container *ngIf="row.tipo == 1">
+          <div class="not-noticia row clearfix">
+            <div class="not-titulo">
+              {{row.titulo}}
+            </div>
+            <div class="not-imagen">
+              <img src="{{row.imagenes[0].url}}" class="float-left" width="46%" style="padding: 2%;">
+              <p class="text-justify">
+                {{row.resumen}}
+              </p>
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
+
     </ng-container>
-  </ng-container>
+  </div>
 
-</div>
+  <!-- SIDEBAR-->
+  <div class="right-body">
+    <ng-container *ngIf="info != undefined">
 
-<!-- SIDEBAR-->
-<div class="right-body">
+      <!-- PUBLICIDAD -->
+      <ng-container *ngFor="let row of info.publicidadDTOs">
+        <img src="{{row.imagen.url}}" width="100%" class="pub-publicidad">
+      </ng-container>
 
-  <ng-container *ngIf="info != undefined">
-    <ng-container *ngFor="let row of info.publicidadDTOs">
-      <div class="pub-publicidad pull-rigth">
-        <img src="{{row.imagen.url}}" width="100%">
-      </div>
+      <!-- MINI ARTICULO-->
+      <ng-container *ngFor="let row of info.articuloDTOs">
+        <ng-container *ngIf="row.tipo == 2">
+          <div class="art-articulo row clearfix">
+            <div class="art-titulo">
+              {{row.titulo}}
+            </div>
+            <div class="art-texto">
+              {{row.resumen}}
+            </div>
+          </div>
+        </ng-container>
+      </ng-container>
     </ng-container>
-  </ng-container>
 
-  <!-- MINI ARTICULO 1
-  <div class="art-articulo pull-rigth">
-    <div class="art-titulo">
-      CLASICO DE VERANO
-    </div>
-    <div class="art-texto">
-      A partir de mañana jueves, y hasta el dia domingo, se estará desarrollando la Séptimo Edición del Torneo de verano
-      organizado por Don Bosco de Paraná, denominado “Clásico de Verano”.
-    </div>
-  </div> -->
-
+  </div>
 </div>

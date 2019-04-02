@@ -1,22 +1,4 @@
-.left-body {
-    width: 70%;
-    float: left;
-    position: relative;
-}
-
-.right-body {
-    width: 30%;
-    float: right;
-    position: relative;
-    padding: 2%;
-}
-
 .not-noticia {
-    padding-bottom: 3%;
-}
-
-.pub-publicidad {
-    padding-bottom: 10%;
 }
 
 .art-articulo {
@@ -35,6 +17,28 @@
     text-align: center;
 }
 
+/* COMPUTER DESIGN for reponsive */
+@media(min-width: 800px) {
+    .left-body {
+        width: 70%;
+        float: left;
+        position: relative;
+    }
+    
+    .right-body {
+        width: 30%;
+        float: right;
+        position: relative;
+        padding: 2%;
+        padding-left: 6%;
+    }
+
+    .pub-publicidad {
+        padding-bottom: 10%;
+    }
+    
+}
+
 /* MOBILE DESIGN for reponsive */
 @media(max-width: 800px) {
     .left-body {
@@ -44,6 +48,12 @@
     
     .right-body {
         width: 100%;
-        position: relative;
+        float: left;
     }
+
+    .pub-publicidad {
+        width: 45%;
+        padding: 2%;
+    }
+    
 }
