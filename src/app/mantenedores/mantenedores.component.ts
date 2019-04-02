@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core';
   })
   export class MantenedoresComponent implements OnInit{
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+
     }
   }  

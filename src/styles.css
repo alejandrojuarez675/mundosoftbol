@@ -26,6 +26,12 @@
 
 /* COMPUTER DESIGN for reponsive */
 @media(min-width: 800px) {
+    .banner{
+        margin-left: 7%;
+        margin-right: 7%;
+        margin-top: 3%;
+    }
+
     .body {
         margin-top: 1%;
         margin-left: 7%;
