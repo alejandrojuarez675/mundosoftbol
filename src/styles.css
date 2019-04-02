@@ -7,27 +7,6 @@
     background-attachment: fixed;
 }
 
-@media(min-width: 800px) {
-    .body {
-        margin-top: 1%;
-        margin-left: 7%;
-        margin-right: 7%;
-        padding-left: 3%;
-        padding-right: 3%;
-        background-color: rgb(248, 247, 247);
-    }
-}
-
-/* mobile responsive design*/
-@media(max-width: 800px) {
-    .body {
-        padding-left: 10%;
-        padding-right: 5%;
-        background-color: rgb(248, 247, 247);
-    }
-}
-
-
 .not-imagen{
     padding-left: 2%;
 }
@@ -47,6 +26,15 @@
 
 /* COMPUTER DESIGN for reponsive */
 @media(min-width: 800px) {
+    .body {
+        margin-top: 1%;
+        margin-left: 7%;
+        margin-right: 7%;
+        padding-left: 3%;
+        padding-right: 3%;
+        background-color: rgb(248, 247, 247);
+    }
+    
     .left-body {
         width: 70%;
         float: left;
@@ -63,7 +51,7 @@
     .pub-publicidad {
         padding-bottom: 10%;
     }
-
+    
     .not-titulo {
         width: 100%;
         text-align: center;
@@ -71,11 +59,17 @@
         font-weight: bold;
         padding: 2%;
     }
-        
+    
 }
 
 /* MOBILE DESIGN for reponsive */
 @media(max-width: 800px) {
+    .body {
+        padding-left: 10%;
+        padding-right: 5%;
+        background-color: rgb(248, 247, 247);
+    }
+
     .left-body {
         width: 100%;
         position: relative;
