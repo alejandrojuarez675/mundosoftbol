@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  gateway: "https://www.mundosoftbol.com.ar/info"
 };
