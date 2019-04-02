@@ -1,6 +1,6 @@
 import { OnInit, Component } from '@angular/core';
-import { AppService } from '../app.service';
-import { PaginaDTO } from '../app.models';
+import { AppService } from '../../app.service';
+import { PaginaDTO } from '../../app.models';
 
 @Component({
   selector: 'app-articulo',
@@ -18,11 +18,10 @@ export class ArticuloComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.appService.getInfo().subscribe(data => {
-      this.info = data;
-    });
-
     this.id = parseInt(window.location.href.split('/')[window.location.href.split('/').length-1]) 
 
+    this.appService.getInfoById(this.id).subscribe(data => {
+      this.info = data;
+    });
   }
 }  

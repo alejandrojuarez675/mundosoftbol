@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
-import { PaginaDTO } from '../app.models';
+import { AppService } from '../../app.service';
+import { PaginaDTO } from '../../app.models';
 
 @Component({
   selector: 'app-index',

@@ -5,15 +5,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
-import { ArticuloComponent } from './articulo/articulo.component';
-import { IndexComponent } from './index/index.component';
 import { LocatorService } from './locator.service';
-
+import { ArticuloComponent } from './pagina/articulo/articulo.component';
+import { IndexComponent } from './pagina/index/index.component';
+import { MantenedoresComponent } from './mantenedores/mantenedores.component';
 
 
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'articulo/:id', component: ArticuloComponent },
+  { path: 'xpanel', component: MantenedoresComponent}
 ];
 
 
@@ -21,7 +22,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     IndexComponent,
-    ArticuloComponent
+    ArticuloComponent,
+    MantenedoresComponent
   ],
   imports: [
     BrowserModule,

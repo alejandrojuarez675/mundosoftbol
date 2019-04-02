@@ -15,4 +15,8 @@ export class AppService {
         return this.http.get<PaginaDTO>(this.endpoint + "/info");
     }
 
+    getInfoById(id: number){
+        return this.http.get<PaginaDTO>(this.endpoint + "/info/"+id);
+    }
+
 }
