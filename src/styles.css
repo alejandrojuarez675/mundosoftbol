@@ -26,3 +26,77 @@
         background-color: rgb(248, 247, 247);
     }
 }
+
+
+.not-imagen{
+    padding-left: 2%;
+}
+
+.not-noticia {
+    width: 100%;
+}
+
+.art-articulo {
+    padding-bottom: 10%;
+}
+
+.art-titulo {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* COMPUTER DESIGN for reponsive */
+@media(min-width: 800px) {
+    .left-body {
+        width: 70%;
+        float: left;
+        position: relative;
+    }
+    
+    .right-body {
+        width: 30%;
+        float: right;
+        position: relative;
+        padding: 2%;
+    }
+
+    .pub-publicidad {
+        padding-bottom: 10%;
+    }
+
+    .not-titulo {
+        width: 100%;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 2%;
+    }
+        
+}
+
+/* MOBILE DESIGN for reponsive */
+@media(max-width: 800px) {
+    .left-body {
+        width: 100%;
+        position: relative;
+    }
+    
+    .right-body {
+        width: 100%;
+        float: left;
+    }
+
+    .pub-publicidad {
+        width: 45%;
+        padding: 2%;
+    }
+
+    .not-titulo {
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 2%;
+    }
+        
+}
